@@ -35,4 +35,8 @@ COPY --from=builder /go/bin/prl-devops-service /go/bin/prl-devops-service
 
 EXPOSE 80
 
+# Mend traceability labels
+LABEL io.mend.image.dockerfile.path=main/Dockerfile
+LABEL org.opencontainers.image.source=https://github.com/GarySegal-Mend-DemoCorp/prl-test
+
 ENTRYPOINT ["/go/bin/prl-devops-service"]
