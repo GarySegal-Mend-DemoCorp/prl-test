@@ -1,7 +1,6 @@
 { 
   "settingsInheritedFrom": "GarySegal-Mend-DemoCorp/whitesource-config@main",
   "scanSettings": {
-    "configMode": "EXTERNAL",
-    "configExternalURL": "https://raw.githubusercontent.com/GarySegal-Mend-DemoCorp/whitesource-config/main/go-config.txt"
+    "configMode": "LOCAL"
   }
 }
