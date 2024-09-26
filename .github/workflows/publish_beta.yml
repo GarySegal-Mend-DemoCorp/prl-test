@@ -19,7 +19,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Check if version has changed
         id: check-version
         uses: actions/github-script@v7
@@ -81,7 +81,7 @@ jobs:
       version: ${{ env.EXT_VERSION }}
       majorVersion: ${{ env.MAJOR_VERSION }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set new version
         run: |
           VERSION=${{ github.event.inputs.version }}
@@ -125,7 +125,7 @@ jobs:
           - goarch: "386"
             goos: darwin
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Add Inbuilt Variables
       run: |
         sed -i "s/var AmplitudeApiKey = \"\"/var AmplitudeApiKey = \"${{ env.AmplitudeApiKey }}\"/g" ./src/constants/amplitude.go
@@ -152,7 +152,7 @@ jobs:
     name: Build Docker Images
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Add Inbuilt Variables
       run: |
         sed -i "s/var AmplitudeApiKey = \"\"/var AmplitudeApiKey = \"${{ env.AmplitudeApiKey }}\"/g" ./src/constants/amplitude.go
