@@ -2,7 +2,7 @@ module github.com/Parallels/prl-devops-service
  
 go 1.21
 
-toolchain go1.22.1
+toolchain go1.23.2
 
 require (
 	github.com/Azure/azure-storage-blob-go v0.15.0
